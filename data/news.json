@@ -1,0 +1,90 @@
+{
+  "news": [
+    {
+      "id": "kcse-2024-results",
+      "title": "Greenfield Academy posts a 100% pass rate in KCSE 2024",
+      "date": "2025-01-10",
+      "category": "Achievement",
+      "image": "/assets/images/video-thumb-01.jpg",
+      "excerpt": "All 148 candidates qualified for university placement, with 41 learners scoring A or A minus and a mean grade of B plus for the school.",
+      "body": "Our 2024 candidate class delivered the strongest results in the history of the school. Every one of the 148 candidates attained the university entry grade, 41 learners scored A or A minus, and the school mean rose to B plus. The Principal thanked teachers, parents and the candidates themselves for a year of disciplined, joyful work."
+    },
+    {
+      "id": "science-fair-award",
+      "title": "Robotics club wins the Nairobi County science and engineering fair",
+      "date": "2024-11-22",
+      "category": "STEM",
+      "image": "/assets/images/courses-05.jpg",
+      "excerpt": "A team of four Grade 11 learners took first place with a solar powered water quality sensor built in the Greenfield innovation lab.",
+      "body": "Our robotics club entered the county science and engineering fair with a low cost water quality sensor powered entirely by a small solar panel. The judges praised the accuracy of the prototype and its potential for rural boreholes. The team now proceeds to the national fair in April."
+    },
+    {
+      "id": "new-library-wing",
+      "title": "New resource centre and reading wing opens to learners",
+      "date": "2024-09-05",
+      "category": "Campus",
+      "image": "/assets/images/video-bg.jpg",
+      "excerpt": "The two storey resource centre adds 12,000 titles, 40 study carrels and a dedicated digital research lab for senior school learners.",
+      "body": "After eighteen months of construction, the Greenfield resource centre is open. The ground floor holds the junior library and story corner, while the upper floor is reserved for senior school private study and digital research. The project was funded by the school and the Greenfield Parents Association."
+    },
+    {
+      "id": "music-festival",
+      "title": "Choir and brass band head to the national music festival",
+      "date": "2024-08-14",
+      "category": "Arts",
+      "image": "/assets/images/video-thumb-02.jpg",
+      "excerpt": "Both ensembles took first place at the regional eliminations and will represent Nairobi at the Kenya Music Festival in Nakuru.",
+      "body": "The Greenfield choir and the brass band swept their categories at the regional eliminations held in Nairobi. Mr. Brian Kiprotich, Head of Arts and Music, credited an early start to the season and the new practice rooms in the arts block."
+    }
+  ],
+  "events": [
+    {
+      "id": "open-day-2025",
+      "title": "Admissions Open Day and Campus Tour",
+      "date": "2025-02-15",
+      "time": "9:00am to 1:00pm",
+      "location": "Main Quadrangle, Karen Campus",
+      "description": "Meet the Principal, tour classrooms, laboratories and boarding houses, and speak to heads of section about 2025 placement."
+    },
+    {
+      "id": "term-one-opening",
+      "title": "Term One Opening and Orientation",
+      "date": "2025-01-06",
+      "time": "7:30am",
+      "location": "School Assembly Hall",
+      "description": "New learners report for orientation, uniform collection and class placement. Returning learners report for the first assembly."
+    },
+    {
+      "id": "sports-gala",
+      "title": "Inter House Sports Gala",
+      "date": "2025-03-21",
+      "time": "8:00am to 4:00pm",
+      "location": "Greenfield Sports Ground",
+      "description": "A full day of athletics, swimming and ball games across the four houses. Parents and alumni are warmly invited."
+    },
+    {
+      "id": "parents-conference",
+      "title": "Parent Teacher Consultation Day",
+      "date": "2025-04-05",
+      "time": "8:00am to 3:00pm",
+      "location": "Classroom Blocks A and B",
+      "description": "Book a fifteen minute slot with each subject teacher to review Term One progress reports and set targets."
+    },
+    {
+      "id": "science-fair-2025",
+      "title": "Greenfield Science and Innovation Fair",
+      "date": "2025-05-17",
+      "time": "10:00am to 3:00pm",
+      "location": "Science Block and Innovation Lab",
+      "description": "Learners from Grade 4 upwards exhibit research projects and prototypes. Judged by alumni engineers and university lecturers."
+    },
+    {
+      "id": "prize-giving",
+      "title": "Annual Prize Giving and Cultural Evening",
+      "date": "2025-07-25",
+      "time": "4:00pm",
+      "location": "Main Quadrangle",
+      "description": "Celebrating academic, sporting and service achievement, followed by performances from the choir, band and drama club."
+    }
+  ]
+}
