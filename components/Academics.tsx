@@ -16,7 +16,7 @@ export default function Academics() {
         className="pointer-events-none absolute inset-0 opacity-[0.5]"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 1px 1px, rgba(26,107,60,.10) 1px, transparent 0)',
+            'radial-gradient(circle at 1px 1px, rgba(75,67,184,.10) 1px, transparent 0)',
           backgroundSize: '30px 30px',
         }}
       />

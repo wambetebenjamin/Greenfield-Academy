@@ -10,12 +10,13 @@ The layout, section rhythm, icon font and photography come from the `grad-school
 
 | Token | Value | Used for |
 | --- | --- | --- |
-| Forest Green | `#1A6B3C` | Primary brand, buttons, headers, stats bar |
-| Sky Blue | `#0099CC` | Secondary accents, links, contact form |
-| Bright Yellow | `#FFD700` | Call to action highlights, crest, dividers |
-| White | `#FFFFFF` | Surfaces and cards |
+| Midnight Indigo | `#181A33` | Navigation, immersive sections and premium contrast |
+| Electric Indigo | `#4B43B8` | Primary actions, tabs and interactive states |
+| Living Coral | `#FF5D73` | Expressive accents, links and highlights |
+| Mango Gold | `#FFC857` | Calls to action, crest details and moments of delight |
+| Warm Cream | `#FFF9F3` | Main canvas and calm editorial surfaces |
 
-Typography is **Nunito** for headings and **Open Sans** for body copy, both self hosted through `@fontsource` so no request ever leaves the domain. Icons use the Font Awesome 4 webfont that shipped inside the template zip (`public/assets/fonts`, loaded from `styles/fontawesome.css`).
+Typography pairs **Fraunces** display type with **DM Sans** for UI and body copy. Both are self hosted through `@fontsource`, so no font request ever leaves the domain. Icons use the Font Awesome 4 webfont that shipped inside the template zip (`public/assets/fonts`, loaded from `styles/fontawesome.css`).
 
 Motion comes from AOS for scroll reveals, plus hand written CSS transitions for the hero Ken Burns zoom, card lifts, tab switches, counters and the WhatsApp pulse. Everything collapses gracefully under `prefers-reduced-motion`.
 

@@ -48,14 +48,14 @@ export default function Header() {
     <>
       {/* TOPBAR */}
       <div
-        className={`relative z-[60] overflow-hidden bg-grad-forest text-white transition-all duration-500 ${
+        className={`relative z-[60] overflow-hidden bg-forest-900 text-white transition-all duration-500 ${
           scrolled ? 'max-h-0 opacity-0' : 'max-h-16 opacity-100'
         }`}
       >
         <div className="container flex items-center justify-between gap-6 py-2.5 text-[12.5px]">
           <p className="flex shrink-0 items-center gap-2 font-heading font-extrabold">
             <span className="hidden h-2 w-2 animate-pulse rounded-full bg-gold sm:inline-block" />
-            <span className="text-gold">Admissions Open 2025!</span>
+            <span className="text-gold">Admissions now open for 2027</span>
           </p>
 
           {/* Desktop contact strip */}
@@ -114,8 +114,8 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-500 ${
           scrolled
-            ? 'bg-white/95 shadow-[0_8px_30px_-16px_rgba(15,42,29,0.4)] backdrop-blur-md'
-            : 'bg-white/90 backdrop-blur'
+            ? 'border-b border-forest/10 bg-cream/95 shadow-[0_12px_40px_-22px_rgba(25,24,67,0.4)] backdrop-blur-xl'
+            : 'border-b border-white/40 bg-cream/90 backdrop-blur-xl'
         }`}
       >
         <nav className="container flex h-[var(--header-h)] items-center justify-between gap-4">
@@ -124,7 +124,7 @@ export default function Header() {
               <Crest className="h-10 w-10 lg:h-12 lg:w-12" />
             </span>
             <span className="leading-none">
-              <span className="block font-heading text-[1.15rem] font-black tracking-tight text-forest lg:text-[1.35rem]">
+              <span className="block font-display text-[1.2rem] font-bold tracking-tight text-forest-900 lg:text-[1.45rem]">
                 Greenfield <span className="text-sky">Academy</span>
               </span>
               <span className="mt-1 block font-heading text-[9.5px] font-bold uppercase tracking-[0.22em] text-ink-muted">
@@ -141,13 +141,13 @@ export default function Header() {
                 <li key={link.label}>
                   <Link
                     href={external ? link.href : `/${link.href}`}
-                    className={`relative rounded-full px-3.5 py-2 font-heading text-[13.5px] font-bold transition-all duration-300 ${
+                    className={`relative rounded-full px-3.5 py-2 font-body text-[13px] font-semibold transition-all duration-300 ${
                       isActive ? 'text-forest' : 'text-ink-soft hover:text-forest'
                     }`}
                   >
                     {link.label}
                     <span
-                      className={`absolute bottom-0.5 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-gold transition-all duration-300 ${
+                      className={`absolute bottom-0.5 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-sky transition-all duration-300 ${
                         isActive ? 'w-5' : 'w-0'
                       }`}
                     />
@@ -166,7 +166,7 @@ export default function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle navigation menu"
               aria-expanded={open}
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-forest/15 text-forest transition hover:bg-forest hover:text-white xl:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl border border-forest/15 bg-white/70 text-forest-700 transition hover:border-sky hover:bg-sky hover:text-white xl:hidden"
             >
               <i className={`fa ${open ? 'fa-times' : 'fa-bars'} text-lg`} aria-hidden />
             </button>
@@ -175,7 +175,7 @@ export default function Header() {
 
         {/* Mobile drawer */}
         <div
-          className={`overflow-hidden border-t border-forest/10 bg-white transition-[max-height,opacity] duration-500 ease-out xl:hidden ${
+          className={`overflow-hidden border-t border-forest/10 bg-cream transition-[max-height,opacity] duration-500 ease-out xl:hidden ${
             open ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
@@ -191,7 +191,7 @@ export default function Header() {
                 <Link
                   href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-b border-forest/5 py-3.5 font-heading text-[15px] font-bold text-ink transition hover:pl-2 hover:text-forest"
+                  className="flex items-center justify-between border-b border-forest/5 py-3.5 font-body text-[15px] font-semibold text-ink transition hover:pl-2 hover:text-sky-700"
                 >
                   {link.label}
                   <i className="fa fa-angle-right text-forest/40" aria-hidden />

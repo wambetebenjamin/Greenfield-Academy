@@ -10,7 +10,7 @@ export default async function NewsEvents() {
   const upcoming = events.slice(0, 5);
 
   return (
-    <section id="news" className="section bg-white">
+    <section id="news" className="section overflow-hidden bg-white">
       <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-sky-50/70 blur-3xl" />
 
       <div className="container relative">

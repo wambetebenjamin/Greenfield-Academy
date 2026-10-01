@@ -10,7 +10,7 @@ const accentMap: Record<string, string> = {
 
 export default function StaffDirectory() {
   return (
-    <section id="staff" className="section bg-white">
+    <section id="staff" className="section bg-cream">
       <div className="container relative">
         <SectionHeading
           eyebrow="Our Team"

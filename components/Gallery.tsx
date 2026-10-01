@@ -51,7 +51,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="section bg-forest-50/50">
+    <section id="gallery" className="section overflow-hidden bg-grad-soft">
       <div className="container relative">
         <SectionHeading
           eyebrow="Gallery"

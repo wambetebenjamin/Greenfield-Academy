@@ -50,17 +50,17 @@ export async function sendMail({ to, subject, html, replyTo }: MailInput) {
 }
 
 const shell = (title: string, body: string) => `
-<div style="margin:0;padding:24px;background:#eef8f2;font-family:'Open Sans',Segoe UI,Arial,sans-serif;color:#0f2a1d">
-  <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(15,42,29,.2)">
-    <div style="background:linear-gradient(135deg,#1A6B3C,#0099CC);padding:28px 32px;color:#fff">
-      <div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#FFD700;font-weight:700">${site.motto}</div>
+<div style="margin:0;padding:24px;background:#F7F5FF;font-family:'DM Sans',Segoe UI,Arial,sans-serif;color:#181A33">
+  <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(31,27,78,.2)">
+    <div style="background:linear-gradient(135deg,#302A70,#FF5D73);padding:28px 32px;color:#fff">
+      <div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#FFC857;font-weight:700">${site.motto}</div>
       <div style="font-size:24px;font-weight:800;margin-top:6px">${site.name}</div>
     </div>
     <div style="padding:32px">
-      <h1 style="margin:0 0 16px;font-size:20px;color:#1A6B3C">${title}</h1>
+      <h1 style="margin:0 0 16px;font-size:20px;color:#302A70">${title}</h1>
       ${body}
     </div>
-    <div style="padding:20px 32px;background:#0f2a1d;color:#cfe3d7;font-size:12px;line-height:1.7">
+    <div style="padding:20px 32px;background:#181A33;color:#D9D8EC;font-size:12px;line-height:1.7">
       ${site.address.street}, ${site.address.locality}<br />
       ${site.phoneDisplay} &nbsp;|&nbsp; ${site.email}
     </div>
@@ -76,7 +76,7 @@ export function admissionApplicantEmail(data: {
   return shell(
     `Thank you, ${data.parentName}`,
     `<p style="line-height:1.8;font-size:15px">We have received the application for <strong>${data.studentName}</strong> for <strong>${data.grade}</strong> at ${site.name}.</p>
-     <p style="line-height:1.8;font-size:15px">Your application reference is <strong style="color:#0099CC">${data.reference}</strong>. Please keep it safe, our admissions office will quote it when we call you.</p>
+     <p style="line-height:1.8;font-size:15px">Your application reference is <strong style="color:#FF5D73">${data.reference}</strong>. Please keep it safe, our admissions office will quote it when we call you.</p>
      <p style="line-height:1.8;font-size:15px"><strong>What happens next</strong></p>
      <ol style="line-height:1.9;font-size:15px;padding-left:18px">
        <li>Our registrar calls you within one working day.</li>
@@ -93,7 +93,7 @@ export function admissionOfficeEmail(data: Record<string, string>) {
   const rows = Object.entries(data)
     .map(
       ([key, value]) =>
-        `<tr><td style="padding:8px 12px;background:#eef8f2;font-weight:700;font-size:13px;text-transform:capitalize">${key.replace(
+        `<tr><td style="padding:8px 12px;background:#F7F5FF;font-weight:700;font-size:13px;text-transform:capitalize">${key.replace(
           /([A-Z])/g,
           ' $1',
         )}</td><td style="padding:8px 12px;font-size:13px">${value}</td></tr>`,

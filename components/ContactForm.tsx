@@ -149,7 +149,7 @@ export default function ContactForm() {
             className={`${field('enquiryType')} appearance-none bg-[length:12px] bg-[right_1rem_center] bg-no-repeat pr-10`}
             style={{
               backgroundImage:
-                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%230099CC' d='M1 1l5 5 5-5'/></svg>\")",
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%23FF5D73' d='M1 1l5 5 5-5'/></svg>\")",
             }}
             required
           >

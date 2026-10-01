@@ -199,7 +199,7 @@ export default function AdmissionForm() {
             className={`${field('grade')} appearance-none bg-[length:12px] bg-[right_1rem_center] bg-no-repeat pr-10`}
             style={{
               backgroundImage:
-                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%231A6B3C' d='M1 1l5 5 5-5'/></svg>\")",
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%234B43B8' d='M1 1l5 5 5-5'/></svg>\")",
             }}
             required
           >

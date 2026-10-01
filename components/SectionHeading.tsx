@@ -24,11 +24,11 @@ export default function SectionHeading({
       data-aos="fade-up"
     >
       <span className={light ? 'eyebrow-light' : 'eyebrow'}>
-        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+        <span className="h-1.5 w-1.5 rounded-full bg-sky shadow-[0_0_0_4px_rgba(255,93,115,0.12)]" />
         {eyebrow}
       </span>
       <h2
-        className={`mt-5 font-heading text-[1.9rem] font-black leading-tight text-balance sm:text-[2.35rem] lg:text-[2.7rem] ${
+        className={`mt-5 font-display text-[2.15rem] font-bold leading-[1.08] tracking-[-0.03em] text-balance sm:text-[2.65rem] lg:text-[3.15rem] ${
           light ? 'text-white' : 'text-ink'
         }`}
       >
@@ -40,7 +40,7 @@ export default function SectionHeading({
         </p>
       ) : null}
       <span
-        className={`mt-6 block h-1 w-16 rounded-full bg-grad-gold ${centered ? 'mx-auto' : ''}`}
+        className={`mt-7 block h-1 w-20 rounded-full bg-grad-spectrum ${centered ? 'mx-auto' : ''}`}
       />
     </div>
   );

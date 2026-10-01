@@ -1,18 +1,13 @@
-/* Self hosted brand fonts: Nunito for headings, Open Sans for body.
-   Served from the app bundle so there is no third party request. */
-@import '@fontsource/nunito/latin-400.css';
-@import '@fontsource/nunito/latin-600.css';
-@import '@fontsource/nunito/latin-700.css';
-@import '@fontsource/nunito/latin-800.css';
-@import '@fontsource/nunito/latin-900.css';
-@import '@fontsource/open-sans/latin-400.css';
-@import '@fontsource/open-sans/latin-500.css';
-@import '@fontsource/open-sans/latin-600.css';
-@import '@fontsource/open-sans/latin-700.css';
+/* Premium, self-hosted typography. No third-party font request leaves the domain. */
+@import '@fontsource/fraunces/latin-600.css';
+@import '@fontsource/fraunces/latin-700.css';
+@import '@fontsource/fraunces/latin-800.css';
+@import '@fontsource/dm-sans/latin-400.css';
+@import '@fontsource/dm-sans/latin-500.css';
+@import '@fontsource/dm-sans/latin-600.css';
+@import '@fontsource/dm-sans/latin-700.css';
 
-/* Icon font from the Grad School template assets */
 @import '../styles/fontawesome.css';
-
 @import 'aos/dist/aos.css';
 
 @tailwind base;
@@ -20,12 +15,14 @@
 @tailwind utilities;
 
 :root {
-  --forest: #1a6b3c;
-  --sky: #0099cc;
-  --gold: #ffd700;
-  --header-h: 76px;
-  --font-nunito: 'Nunito', 'Trebuchet MS', sans-serif;
-  --font-open-sans: 'Open Sans', 'Segoe UI', sans-serif;
+  --midnight: #181a33;
+  --indigo: #4b43b8;
+  --coral: #ff5d73;
+  --mango: #ffc857;
+  --cream: #fff9f3;
+  --header-h: 78px;
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-dm-sans: 'DM Sans', Arial, sans-serif;
 }
 
 @layer base {
@@ -35,108 +32,117 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-h) + 16px);
+    scroll-padding-top: calc(var(--header-h) + 18px);
   }
 
   body {
-    @apply bg-white font-body text-ink antialiased;
+    @apply bg-cream font-body text-ink antialiased;
     overflow-x: hidden;
   }
 
   h1,
-  h2,
+  h2 {
+    @apply font-display font-bold tracking-[-0.025em] text-ink;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    @apply font-heading font-extrabold tracking-tight text-ink;
+    @apply font-heading font-bold tracking-tight text-ink;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background: var(--gold);
-    color: #0f2a1d;
+    background: var(--mango);
+    color: var(--midnight);
   }
 
-  /* Scrollbar, desktop only */
   @media (min-width: 1024px) {
     ::-webkit-scrollbar {
       width: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: #eef8f2;
+      background: #f4eff9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1a6b3c;
-      border-radius: 99px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0099cc;
+      background: linear-gradient(var(--indigo), var(--coral));
+      border: 2px solid #f4eff9;
+      border-radius: 999px;
     }
   }
 }
 
 @layer components {
-  /* Buttons, inspired by the Grad School template button block */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-heading text-sm font-bold uppercase tracking-wider transition-all duration-300 ease-out;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-body text-[13px] font-bold tracking-[0.025em] transition-all duration-300 ease-out;
   }
   .btn-primary {
-    @apply btn bg-forest text-white shadow-card hover:-translate-y-0.5 hover:bg-forest-600 hover:shadow-lift;
+    @apply btn bg-forest-700 text-white shadow-card hover:-translate-y-0.5 hover:bg-forest-600 hover:shadow-lift;
   }
   .btn-sky {
-    @apply btn bg-sky text-white shadow-card hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-lift;
+    @apply btn bg-sky text-white shadow-card hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-glow;
   }
   .btn-gold {
     @apply btn bg-gold text-ink shadow-card hover:-translate-y-0.5 hover:bg-gold-400 hover:shadow-lift;
   }
   .btn-ghost {
-    @apply btn border-2 border-white/70 bg-white/5 text-white backdrop-blur hover:-translate-y-0.5 hover:border-gold hover:bg-white hover:text-forest;
+    @apply btn border border-white/35 bg-white/10 text-white backdrop-blur-md hover:-translate-y-0.5 hover:border-white/80 hover:bg-white hover:text-forest-800;
   }
   .btn-outline {
-    @apply btn border-2 border-forest/20 bg-white text-forest hover:-translate-y-0.5 hover:border-forest hover:shadow-card;
+    @apply btn border border-forest/20 bg-white/80 text-forest-700 backdrop-blur hover:-translate-y-0.5 hover:border-forest/45 hover:bg-white hover:shadow-card;
   }
 
-  /* Section shell */
   .section {
-    @apply relative py-20 lg:py-28;
+    @apply relative py-24 lg:py-32;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full bg-forest-50 px-4 py-1.5 font-heading text-xs font-extrabold uppercase tracking-[0.18em] text-forest;
+    @apply inline-flex items-center gap-2 rounded-full border border-forest/10 bg-white/80 px-4 py-2 font-body text-[11px] font-bold uppercase tracking-[0.18em] text-forest-700 shadow-crisp backdrop-blur;
   }
   .eyebrow-light {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 font-heading text-xs font-extrabold uppercase tracking-[0.18em] text-gold backdrop-blur;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 font-body text-[11px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md;
   }
 
-  /* Card system */
   .card {
-    @apply relative overflow-hidden rounded-2xl border border-forest/10 bg-white shadow-card transition-all duration-500 ease-out;
+    @apply relative overflow-hidden rounded-[1.75rem] border border-forest/10 bg-white/90 shadow-card backdrop-blur-sm transition-all duration-500 ease-out;
   }
   .card-hover {
-    @apply hover:-translate-y-2 hover:border-forest/25 hover:shadow-lift;
+    @apply hover:-translate-y-2 hover:border-sky/25 hover:shadow-lift;
   }
 
   .field-label {
-    @apply mb-1.5 block font-heading text-xs font-bold uppercase tracking-wider text-ink-soft;
+    @apply mb-1.5 block font-body text-[11px] font-bold uppercase tracking-[0.12em] text-ink-soft;
   }
   .field {
-    @apply w-full rounded-xl border border-forest/15 bg-white px-4 py-3 font-body text-[0.95rem] text-ink outline-none transition-all duration-300 placeholder:text-ink-muted/70 focus:border-forest focus:ring-4 focus:ring-forest/10;
+    @apply w-full rounded-2xl border border-forest/15 bg-[#FCFBFF] px-4 py-3.5 font-body text-[0.95rem] text-ink outline-none transition-all duration-300 placeholder:text-ink-muted/65 focus:border-sky focus:bg-white focus:ring-4 focus:ring-sky/10;
   }
 
   .link-underline {
     @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
   }
 
-  /* Decorative vertical rule above headings, borrowed from the template */
   .heading-rule::before {
     content: '';
     position: absolute;
-    top: -46px;
+    top: -52px;
     left: 50%;
-    width: 2px;
-    height: 36px;
+    width: 44px;
+    height: 2px;
     transform: translateX(-50%);
-    background: linear-gradient(to bottom, transparent, var(--gold));
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--indigo), var(--coral), var(--mango));
+  }
+
+  .color-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
   }
 }
 
@@ -155,9 +161,14 @@
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
+  .text-gradient-vivid {
+    color: transparent;
+    background: linear-gradient(100deg, #ff8394 0%, #ffc857 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
 }
 
-/* AOS easing refinement */
 [data-aos] {
   pointer-events: none;
 }

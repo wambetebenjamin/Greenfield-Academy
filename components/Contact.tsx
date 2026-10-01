@@ -35,7 +35,7 @@ const details = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="section bg-forest-50/50">
+    <section id="contact" className="section overflow-hidden bg-grad-soft">
       <div className="container relative">
         <SectionHeading
           eyebrow="Contact"

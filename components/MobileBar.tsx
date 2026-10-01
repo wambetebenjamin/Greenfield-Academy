@@ -11,7 +11,7 @@ export default function MobileBar() {
 
       <nav
         aria-label="Quick actions"
-        className="fixed inset-x-0 bottom-0 z-[75] border-t border-forest/10 bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_30px_-16px_rgba(15,42,29,0.45)] backdrop-blur-md sm:hidden"
+        className="fixed inset-x-0 bottom-0 z-[75] border-t border-forest/10 bg-cream/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_30px_-16px_rgba(25,24,67,0.4)] backdrop-blur-md sm:hidden"
       >
         <div className="grid grid-cols-3">
           <a

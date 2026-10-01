@@ -3,19 +3,26 @@ import Link from 'next/link';
 import SectionHeading from './SectionHeading';
 import { coreValues, site } from '@/lib/site';
 
+const valueThemes = [
+  { bubble: 'bg-forest-100 group-hover:bg-forest-200/70', icon: 'bg-grad-forest text-gold' },
+  { bubble: 'bg-sky-100 group-hover:bg-sky-200/70', icon: 'bg-grad-sky text-white' },
+  { bubble: 'bg-gold-100 group-hover:bg-gold-200/70', icon: 'bg-grad-gold text-forest-900' },
+  { bubble: 'bg-[#DDF8F3] group-hover:bg-[#BCEFE7]', icon: 'bg-gradient-to-br from-[#16A890] to-[#087668] text-white' },
+];
+
 export default function About() {
   return (
-    <section id="about" className="section bg-white">
+    <section id="about" className="section overflow-hidden bg-cream">
       {/* soft background blobs */}
-      <div className="pointer-events-none absolute -left-32 top-24 h-80 w-80 rounded-full bg-forest-50 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-sky-50 blur-3xl" />
+      <div className="color-orb -left-32 top-24 h-80 w-80 bg-forest-200/55" />
+      <div className="color-orb -right-24 bottom-10 h-72 w-72 bg-sky-100/80" />
 
       <div className="container relative">
         <SectionHeading
           eyebrow="About Our School"
           title={
             <>
-              A welcome from the <span className="text-forest">Principal</span>
+              A welcome from the <span className="text-sky">Principal</span>
             </>
           }
           text="Thirty years of teaching Nairobi families, one child at a time."
@@ -25,15 +32,15 @@ export default function About() {
         <div className="mt-16 grid items-center gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           <div className="relative" data-aos="fade-right">
             <div className="absolute -left-4 -top-4 h-full w-full rounded-[2rem] border-2 border-gold/50" aria-hidden />
-            <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
+            <div className="relative overflow-hidden rounded-[2.5rem] shadow-lift">
               <Image
                 src="/assets/images/main-thumb.png"
                 alt="Dr. Margaret Wanjiku, Principal of Greenfield Academy"
                 width={570}
                 height={500}
-                className="h-[360px] w-full object-cover brightness-[1.35] saturate-[1.08] transition-transform duration-[1200ms] hover:scale-105 sm:h-[440px]"
+                className="h-[360px] w-full object-cover saturate-[1.08] transition-transform duration-[1200ms] hover:scale-105 sm:h-[470px]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-900/85 via-forest-900/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/5 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="font-heading text-lg font-black text-white">Dr. Margaret Wanjiku</p>
                 <p className="text-[13px] text-gold">Principal, Greenfield Academy</p>
@@ -106,21 +113,24 @@ export default function About() {
           </div>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {coreValues.map((value, i) => (
+            {coreValues.map((value, i) => {
+              const theme = valueThemes[i % valueThemes.length];
+              return (
               <article
                 key={value.title}
                 className="card card-hover group p-7"
                 data-aos="fade-up"
                 data-aos-delay={i * 90}
               >
-                <span className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-forest-50 transition-all duration-500 group-hover:scale-[2.6] group-hover:bg-forest-50/70" />
-                <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-grad-forest text-gold shadow-card transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-6">
+                <span className={`absolute -right-6 -top-6 h-24 w-24 rounded-full transition-all duration-500 group-hover:scale-[2.6] ${theme.bubble}`} />
+                <span className={`relative flex h-14 w-14 items-center justify-center rounded-2xl shadow-card transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-6 ${theme.icon}`}>
                   <i className={`fa ${value.icon} text-xl`} aria-hidden />
                 </span>
                 <h4 className="relative mt-5 font-heading text-lg font-extrabold">{value.title}</h4>
                 <p className="relative mt-2.5 text-[14px] leading-relaxed text-ink-soft">{value.text}</p>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

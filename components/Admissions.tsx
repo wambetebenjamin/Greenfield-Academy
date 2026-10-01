@@ -5,7 +5,8 @@ import { admissionRequirements, admissionSteps, site, whatsappLink } from '@/lib
 export default function Admissions() {
   return (
     <section id="admissions" className="section relative overflow-hidden bg-forest-900 text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,153,204,0.35),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,93,115,0.34),transparent_52%)]" />
+      <div className="pointer-events-none absolute -bottom-48 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
@@ -16,7 +17,7 @@ export default function Admissions() {
 
       <div className="container relative">
         <SectionHeading
-          eyebrow="Admissions 2025"
+          eyebrow="Admissions 2027"
           light
           title={
             <>

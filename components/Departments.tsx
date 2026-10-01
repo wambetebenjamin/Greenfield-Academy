@@ -4,24 +4,24 @@ import { departments } from '@/lib/site';
 const accentMap: Record<string, { icon: string; glow: string; bar: string }> = {
   forest: {
     icon: 'bg-grad-forest text-gold',
-    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(26,107,60,0.45)]',
+    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(75,67,184,0.45)]',
     bar: 'bg-forest',
   },
   sky: {
     icon: 'bg-grad-sky text-white',
-    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(0,153,204,0.45)]',
+    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(255,93,115,0.45)]',
     bar: 'bg-sky',
   },
   gold: {
     icon: 'bg-grad-gold text-forest-700',
-    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(255,215,0,0.5)]',
+    glow: 'group-hover:shadow-[0_24px_48px_-20px_rgba(255,200,87,0.55)]',
     bar: 'bg-gold',
   },
 };
 
 export default function Departments() {
   return (
-    <section id="departments" className="section bg-white">
+    <section id="departments" className="section overflow-hidden bg-cream">
       <div className="container relative">
         <SectionHeading
           eyebrow="Departments"

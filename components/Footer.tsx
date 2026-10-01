@@ -8,8 +8,8 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-ink text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(26,107,60,0.55),transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,153,204,0.28),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(75,67,184,0.58),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,93,115,0.25),transparent_50%)]" />
 
       {/* Motto strip */}
       <div className="relative border-b border-white/10">
@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/#apply" className="btn-gold !py-2.5 !text-[12px]">
-              <i className="fa fa-pencil-square-o" aria-hidden /> Apply for 2025
+              <i className="fa fa-pencil-square-o" aria-hidden /> Apply for 2027
             </Link>
             <a
               href={whatsappLink}

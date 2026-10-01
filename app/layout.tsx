@@ -5,7 +5,7 @@ import SessionProvider from '@/components/SessionProvider';
 import { site } from '@/lib/site';
 
 export const viewport: Viewport = {
-  themeColor: '#1A6B3C',
+  themeColor: '#181A33',
   width: 'device-width',
   initialScale: 1,
 };
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'IGCSE school Nairobi',
     'Greenfield Academy',
     'primary school Karen Nairobi',
-    'secondary school Nairobi admissions 2025',
+    'secondary school Nairobi admissions 2027',
   ],
   authors: [{ name: site.name }],
   creator: site.name,
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: '/assets/images/main-slider-02.jpg',
-        width: 1600,
-        height: 800,
-        alt: `${site.name} learners on graduation day`,
+        url: '/assets/images/greenfield-campus-life.jpg',
+        width: 1376,
+        height: 768,
+        alt: `${site.name} learners walking through the Nairobi campus`,
       },
     ],
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${site.name} | Nurturing Tomorrow's Leaders Today`,
     description: site.description,
-    images: ['/assets/images/main-slider-02.jpg'],
+    images: ['/assets/images/greenfield-campus-life.jpg'],
   },
   robots: {
     index: true,

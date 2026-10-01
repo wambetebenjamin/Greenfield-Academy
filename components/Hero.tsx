@@ -67,56 +67,55 @@ export default function Hero() {
               fill
               priority={i === 0}
               sizes="100vw"
-              className={`object-cover brightness-[1.45] saturate-[1.1] ${
+              className={`object-cover ${i === 0 ? 'object-[62%_center]' : 'object-center'} ${
                 isActive ? 'animate-slow-zoom' : ''
               }`}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-forest-900/85 via-forest-900/70 to-sky-900/60" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(0,153,204,0.28),transparent_60%)]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#12142f]/95 via-[#17183b]/75 to-[#261a42]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#11132e]/70 via-transparent to-[#1e1b48]/20" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,200,87,0.2),transparent_28%)]" />
           </div>
         );
       })}
 
-      {/* Soft pattern overlay */}
+      {/* A lively, subtle editorial texture rather than a heavy colour wash. */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        className="pointer-events-none absolute inset-0 opacity-[0.09]"
         style={{
-          backgroundImage:
-            'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)',
-          backgroundSize: '26px 26px',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)',
+          backgroundSize: '30px 30px',
+          maskImage: 'linear-gradient(to right, black, transparent 72%)',
         }}
       />
+      <span className="pointer-events-none absolute -left-20 top-1/3 h-52 w-52 animate-soft-pulse rounded-full bg-sky/20 blur-3xl" />
 
-      <div className="container relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-center py-20 lg:py-24">
-        <div className="max-w-3xl">
+      <div className="container relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-center pb-32 pt-20 lg:pb-36 lg:pt-24">
+        <div className="max-w-[52rem]">
           {heroSlides.map((slide, i) => {
             const isActive = i === index;
             return (
-              <div
-                key={slide.id}
-                className={`${isActive ? 'block' : 'hidden'}`}
-                aria-hidden={!isActive}
-              >
+              <div key={slide.id} className={isActive ? 'block' : 'hidden'} aria-hidden={!isActive}>
                 <span
                   key={`${slide.id}-eyebrow-${index}`}
                   className="eyebrow-light animate-fade-up"
-                  style={{ animationDelay: '120ms' }}
+                  style={{ animationDelay: '100ms' }}
                 >
-                  <i className="fa fa-star" aria-hidden /> {slide.eyebrow}
+                  <span className="h-2 w-2 rounded-full bg-sky shadow-[0_0_0_5px_rgba(255,93,115,0.16)]" />
+                  {slide.eyebrow}
                 </span>
 
                 <h1
                   key={`${slide.id}-title-${index}`}
-                  className="mt-6 animate-fade-up font-heading text-[2.15rem] font-black leading-[1.08] text-white text-balance sm:text-5xl lg:text-[4rem]"
-                  style={{ animationDelay: '240ms' }}
+                  className="mt-7 max-w-[50rem] animate-fade-up font-display text-[2.9rem] font-bold leading-[0.98] tracking-[-0.035em] text-white text-balance sm:text-[4rem] lg:text-[5.45rem]"
+                  style={{ animationDelay: '220ms' }}
                 >
                   {slide.title}
                 </h1>
 
                 <p
                   key={`${slide.id}-text-${index}`}
-                  className="mt-6 max-w-2xl animate-fade-up text-[1.02rem] leading-relaxed text-white/80 lg:text-lg"
-                  style={{ animationDelay: '380ms' }}
+                  className="mt-7 max-w-2xl animate-fade-up text-[1rem] leading-[1.8] text-white/78 sm:text-[1.08rem] lg:text-lg"
+                  style={{ animationDelay: '360ms' }}
                 >
                   {slide.text}
                 </p>
@@ -124,12 +123,12 @@ export default function Hero() {
                 <div
                   key={`${slide.id}-cta-${index}`}
                   className="mt-9 flex animate-fade-up flex-wrap items-center gap-3"
-                  style={{ animationDelay: '520ms' }}
+                  style={{ animationDelay: '480ms' }}
                 >
-                  <Link href={slide.cta.href} className="btn-gold">
-                    {slide.cta.label} <i className="fa fa-angle-double-right" aria-hidden />
+                  <Link href={slide.cta.href} className="btn-gold !px-7 !py-3.5">
+                    {slide.cta.label} <i className="fa fa-arrow-right" aria-hidden />
                   </Link>
-                  <Link href={slide.secondary.href} className="btn-ghost">
+                  <Link href={slide.secondary.href} className="btn-ghost !px-7 !py-3.5">
                     {slide.secondary.label}
                   </Link>
                 </div>
@@ -137,26 +136,35 @@ export default function Hero() {
             );
           })}
 
-          {/* Trust strip */}
           <div
-            className="mt-12 flex animate-fade-in flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-[13px] text-white/75"
-            style={{ animationDelay: '700ms' }}
+            className="mt-12 flex animate-fade-in flex-wrap items-center gap-x-7 gap-y-3 text-[12.5px] font-medium text-white/72"
+            style={{ animationDelay: '650ms' }}
           >
-            <span className="flex items-center gap-2">
-              <i className="fa fa-check-circle text-gold" aria-hidden /> CBC and IGCSE pathways
+            <span className="flex items-center gap-2.5">
+              <i className="fa fa-check-circle text-gold" aria-hidden /> CBC & IGCSE pathways
             </span>
-            <span className="flex items-center gap-2">
-              <i className="fa fa-check-circle text-gold" aria-hidden /> Day and boarding
+            <span className="flex items-center gap-2.5">
+              <i className="fa fa-check-circle text-sky-300" aria-hidden /> Day & boarding
             </span>
-            <span className="flex items-center gap-2">
-              <i className="fa fa-check-circle text-gold" aria-hidden /> Est. {site.founded}, Karen, Nairobi
+            <span className="flex items-center gap-2.5">
+              <i className="fa fa-check-circle text-gold" aria-hidden /> Est. {site.founded} in Karen
             </span>
           </div>
         </div>
       </div>
 
-      {/* Controls */}
-      <div className="absolute bottom-24 left-0 right-0 z-20 lg:bottom-10">
+      {/* A small editorial proof point adds personality without covering the photograph. */}
+      <div className="absolute bottom-28 right-[max(2rem,calc((100vw-1240px)/2+2rem))] z-20 hidden max-w-[250px] items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-3.5 text-white shadow-lift backdrop-blur-xl xl:flex">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky text-lg text-white">
+          <i className="fa fa-heart" aria-hidden />
+        </span>
+        <span>
+          <span className="block font-heading text-sm font-bold">Known by name</span>
+          <span className="mt-0.5 block text-[11.5px] leading-snug text-white/65">A genuinely personal school experience</span>
+        </span>
+      </div>
+
+      <div className="absolute bottom-20 left-0 right-0 z-20 lg:bottom-10">
         <div className="container flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             {heroSlides.map((slide, i) => (
@@ -167,7 +175,7 @@ export default function Hero() {
                 aria-label={`Show slide ${i + 1}`}
                 aria-current={i === index}
                 className="group relative h-1.5 overflow-hidden rounded-full bg-white/25 transition-all duration-500"
-                style={{ width: i === index ? 58 : 22 }}
+                style={{ width: i === index ? 62 : 22 }}
               >
                 <span
                   className={`absolute inset-y-0 left-0 rounded-full bg-gold transition-all ${
@@ -184,7 +192,7 @@ export default function Hero() {
               type="button"
               onClick={() => go(index - 1)}
               aria-label="Previous slide"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 hover:-translate-x-0.5 hover:border-gold hover:bg-gold hover:text-ink"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition-all duration-300 hover:-translate-x-0.5 hover:border-gold hover:bg-gold hover:text-ink"
             >
               <i className="fa fa-angle-left text-xl" aria-hidden />
             </button>
@@ -192,23 +200,13 @@ export default function Hero() {
               type="button"
               onClick={() => go(index + 1)}
               aria-label="Next slide"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 hover:translate-x-0.5 hover:border-gold hover:bg-gold hover:text-ink"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition-all duration-300 hover:translate-x-0.5 hover:border-gold hover:bg-gold hover:text-ink"
             >
               <i className="fa fa-angle-right text-xl" aria-hidden />
             </button>
           </div>
         </div>
       </div>
-
-      {/* Scroll cue */}
-      <Link
-        href="#stats"
-        aria-label="Scroll to the next section"
-        className="absolute bottom-4 left-1/2 z-20 hidden -translate-x-1/2 animate-float flex-col items-center gap-1 text-white/70 transition hover:text-gold lg:flex"
-      >
-        <span className="font-heading text-[10px] font-bold uppercase tracking-[0.3em]">Scroll</span>
-        <i className="fa fa-angle-double-down text-lg" aria-hidden />
-      </Link>
     </section>
   );
 }
